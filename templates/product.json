@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "product-template": {
+      "type": "product-template",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "reviews",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "Best moisturizer I have ever used. My skin feels amazing every single morning.",
+            "author_name": "Anna L.",
+            "author_location": "Sydney, Australia"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "Lightweight, absorbs quickly and makes my skin glow. Absolutely love it!",
+            "author_name": "Maria S.",
+            "author_location": "São Paulo, Brazil"
+          }
+        }
+      },
+      "block_order": ["review_1", "review_2"],
+      "settings": {
+        "title": "What customers are saying"
+      }
+    }
+  },
+  "order": ["product-template", "reviews"]
+}

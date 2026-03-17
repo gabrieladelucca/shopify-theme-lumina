@@ -1,0 +1,88 @@
+<section class="reviews">
+  <div class="reviews__container">
+
+    <h2 class="reviews__title">{{ section.settings.title }}</h2>
+
+    <div class="reviews__grid">
+
+      {% for block in section.blocks %}
+        <div class="reviews__card" {{ block.shopify_attributes }}>
+
+          <div class="reviews__stars">
+            {% assign rating = block.settings.rating %}
+            {% for i in (1..5) %}
+              {% if i <= rating %}
+                <span class="star star--filled">★</span>
+              {% else %}
+                <span class="star">★</span>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          <p class="reviews__text">"{{ block.settings.review_text }}"</p>
+
+          <div class="reviews__author">
+            <strong>{{ block.settings.author_name }}</strong>
+            <span>{{ block.settings.author_location }}</span>
+          </div>
+
+        </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section title",
+      "default": "What our customers say"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review text",
+          "default": "This product completely transformed my skin. I saw results within the first week!"
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "label": "Author name",
+          "default": "Sarah M."
+        },
+        {
+          "type": "text",
+          "id": "author_location",
+          "label": "Author location",
+          "default": "New York, USA"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reviews"
+    }
+  ]
+}
+{% endschema %}

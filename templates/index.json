@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "eyebrow": "New Collection",
+        "title": "Glow from within.",
+        "subtitle": "Science-backed skincare formulated for real results. Clean ingredients, visible difference.",
+        "button_label": "Shop Now",
+        "bg_color": "#f5f0eb"
+      }
+    },
+    "reviews": {
+      "type": "reviews",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "This product completely transformed my skin. I saw results within the first week!",
+            "author_name": "Sarah M.",
+            "author_location": "New York, USA"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "Finally a brand that delivers on its promises. My skin has never felt so hydrated.",
+            "author_name": "Emma R.",
+            "author_location": "London, UK"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "rating": 4,
+            "review_text": "Great quality ingredients and the packaging is beautiful. Will definitely repurchase.",
+            "author_name": "Julia K.",
+            "author_location": "Toronto, Canada"
+          }
+        }
+      },
+      "block_order": ["review_1", "review_2", "review_3"],
+      "settings": {
+        "title": "What our customers say"
+      }
+    }
+  },
+  "order": ["hero", "reviews"]
+}

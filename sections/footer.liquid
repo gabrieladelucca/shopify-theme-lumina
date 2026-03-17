@@ -1,0 +1,50 @@
+<footer class="footer">
+  <div class="footer__container">
+
+    <div class="footer__brand">
+      <h3>{{ shop.name }}</h3>
+      <p>Clean beauty for every skin type. Made with love and science.</p>
+    </div>
+
+    <div class="footer__links">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="/collections/all">All Products</a></li>
+        <li><a href="/collections/moisturizers">Moisturizers</a></li>
+        <li><a href="/collections/serums">Serums</a></li>
+        <li><a href="/collections/cleansers">Cleansers</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__links">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="/pages/faq">FAQ</a></li>
+        <li><a href="/pages/shipping">Shipping</a></li>
+        <li><a href="/pages/returns">Returns</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__newsletter">
+      <h4>Stay in the loop</h4>
+      <p>Get skincare tips and exclusive offers.</p>
+      <form class="footer__form">
+        <input type="email" placeholder="Your email address" />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": []
+}
+{% endschema %}
